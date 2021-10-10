@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Pepperoni club</title>
+    <title>About &middot; L'ambiance</title>
 
     <!-- mobile setup -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -19,13 +19,13 @@
     <meta name="description" content="">
 
     <!-- Facebook -->
-    <meta property="og:title" content="Restaurant" />
+    <meta property="og:title" content="About" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content=".//" />
+    <meta property="og:url" content="./about.html/" />
     <meta property="og:description" content="Here the excerp for this page" />
 
     <!-- Twitter -->
-    <meta name="twitter:title" content="Restaurant" />
+    <meta name="twitter:title" content="About" />
     <meta name="twitter:description" content="Here the excerp for this page" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicons/apple-touch-icon-72x72.png">
@@ -53,84 +53,40 @@
     <div id="wrapper">
         <!-- main content -->
         <main>
-            <header>
-                <a href="." class="logo">
-                    <h1>Restaurant</h1>
-                    <img src="./assets/img/logo/3.png" alt="Restaurant" />
+            <!-- The header for content -->
+            <header class="detail">
+                <a href="." class="back" data-transition="slide-from-top">
+                    <h1>back</h1>
                 </a>
+                <section>
+                    <h3 class="badge">Історія</h3>
+                    <h1>Про нас</h1>
+                </section>
             </header>
-            <!-- The navigation -->
-            <nav class="strokes">
-                <ul id="navigation">
-                    <li>
-                        <a href="./about.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Про нас</h1>
-                                <h5 class="badge-rounded">Щось про нас</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-CommentwithLines"></i>
-                                <h5 class="serif">Наша історія</h5>
-                                <p>Читати більше</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./menu.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Меню</h1>
-                                <h5 class="badge-rounded">Наші смачні страви</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Food"></i>
-                                <h5 class="serif">Наша кухня</h5>
-                                <p>Страви та напої</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./recipe.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Рецепти</h1>
-                                <h5 class="badge-rounded">Наші секретні рецепти</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Diary"></i>
-                                <h5 class="serif">Більше</h5>
-                                <p>Спеціальні рецепти</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./reservation.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Бронювання</h1>
-                                <h5 class="badge-rounded">Приємної вечері</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Users"></i>
-                                <h5 class="serif">Приєднайся до нас</h5>
-                                <p>у гарний вечір</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./contact.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Контакти</h1>
-                                <h5 class="badge-rounded">Потрібен зв'язок?</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-LocationMarker"></i>
-                                <h5 class="serif">Залиште нам</h5>
-                                <p>повідомлення</p>
-                            </footer>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- End navigation -->
-            <div class="overlay"></div>
+            <!-- end header -->
+            <div class="content-wrap">
+                <div class="content">
+                    <i class="icon bg icon-CommentwithLines"></i>
+                    <section>
+                        <header>
+                            <h2>Що ми робимо</h2>
+                            <h4 class="serif">Наша маленька історія</h4>
+                        </header>
+
+                        <section>
+                            <p>Peperoni Club - ресторан ексклюзивної японської кухні, який затишно розташований в Premier Palace Hotel, історичному готелі в Києві з віковою історією. Peperoni Club - це особливе місце, над створенням якого ретельно працювали кращі фахівці і експерти, щоб ви змогли відчути неповторний дух Японії, насолоджуючись смачними стравами в хорошій компанії. </p>
+                            <p>Основні принципи Peperoni Club - це найсвіжіші і найкращі продукти, традиційні і адаптовані рецепти від наших кухарів, найвищі вимоги і стандарти на всіх етапах приготування кожної страви.</p>
+                        </section>
+
+                        <footer>
+                            <div class="signature">
+                                <h6>Written by.</h6>
+                                <h5>Pierre Gabant</h5>
+                            </div>
+                        </footer>
+                    </section>
+                </div>
+            </div>
             <div data-remodal-id="modal">
                 <i class="icon bg icon-CommentwithLines"></i>
                 <button data-remodal-action="close" class="remodal-close"></button>
@@ -145,7 +101,7 @@
         <!-- end of main content -->
     </div>
 
-    <!-- The slideshow -->
+<!-- The slideshow -->
 <ul id="slideshow" data-speed="6000">
         <li class="visible" style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/6.jpg&quot;); display: block; z-index: 1;">
             <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/6.jpg" alt="slideshow image">
