@@ -19,14 +19,14 @@
     <meta name="description" content="">
 
     <!-- Facebook -->
-    <meta property="og:title" content="Restaurant" />
+    <meta property="og:title" content="lunch" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content=".//" />
-    <meta property="og:description" content="Here the excerp for this page" />
+    <meta property="og:url" content="./lunch.html/" />
+    <meta property="og:description" content="" />
 
     <!-- Twitter -->
-    <meta name="twitter:title" content="Restaurant" />
-    <meta name="twitter:description" content="Here the excerp for this page" />
+    <meta name="twitter:title" content="lunch" />
+    <meta name="twitter:description" content="" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicons/apple-touch-icon-120x120.png">
@@ -53,84 +53,81 @@
     <div id="wrapper">
         <!-- main content -->
         <main>
-            <header>
-                <a href="." class="logo">
-                    <h1>Restaurant</h1>
-                    <img src="./assets/img/logo/3.png" alt="Restaurant" />
+            <!-- The header for content -->
+            <header class="detail">
+                <a href="." class="back" data-transition="slide-from-top">
+                    <h1>back</h1>
                 </a>
+                <section>
+                    <h3 class="badge">Меню</h3>
+                    <h1>Що ми готуємо</h1>
+                </section>
             </header>
-            <!-- The navigation -->
-            <nav class="strokes">
-                <ul id="navigation">
-                    <li>
-                        <a href="./about.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Про нас</h1>
-                                <h5 class="badge-rounded">Щось про нас</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-CommentwithLines"></i>
-                                <h5 class="serif">Наша історія</h5>
-                                <p>Читати більше</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./menu.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Меню</h1>
-                                <h5 class="badge-rounded">Наші смачні страви</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Food"></i>
-                                <h5 class="serif">Наша кухня</h5>
-                                <p>Страви та напої</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./recipe.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Рецепти</h1>
-                                <h5 class="badge-rounded">Наші секретні рецепти</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Diary"></i>
-                                <h5 class="serif">Більше</h5>
-                                <p>Спеціальні рецепти</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./reservation.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Бронювання</h1>
-                                <h5 class="badge-rounded">Приємної вечері</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Users"></i>
-                                <h5 class="serif">Приєднайся до нас</h5>
-                                <p>у гарний вечір</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./contact.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Контакти</h1>
-                                <h5 class="badge-rounded">Потрібен зв'язок?</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-LocationMarker"></i>
-                                <h5 class="serif">Залиште нам</h5>
-                                <p>повідомлення</p>
-                            </footer>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- End navigation -->
-            <div class="overlay"></div>
+            <!-- end header -->
+            <div class="content-wrap">
+                <div class="content">
+                    <i class="icon bg icon-Food"></i>
+                    <header class="with-subnav">
+                            <ul>
+                                <li class="btn ">
+                                    <a href="./menu.html" data-transition="slide-left">
+                                        <h4>Вечеря</h4>
+                                    </a>
+                                </li>
+                                <li class="btn active">
+                                    <a href="./lunch.html" data-transition="slide-left">
+                                        <h4>Обід</h4>
+                                    </a>
+                                </li>
+                                <li class="btn ">
+                                    <a href="./starters.html" data-transition="slide-left">
+                                        <h4>Закуски</h4>
+                                    </a>
+                                </li>
+                                <li class="btn ">
+                                    <a href="./sweets.html" data-transition="slide-left">
+                                        <h4>Солодощі</h4>
+                                    </a>
+                                </li>
+                            </ul>
+                        </header>
+
+                    <!-- menu content -->
+                    <ul class="price-list">
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Легке блюдо</h3>
+                                <h4 class="price badge">100 ₴</h4>
+                            </div>
+                            <p class="description">Оселедець, панірована риба та свинина</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Лагуна Платте</h3>
+                                <h4 class="price badge">100 ₴</h4>
+                            </div>
+                            <p class="description">Оселедець, панірована риба, свинина та бри</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Дві скибочки свинини</h3>
+                                <h4 class="price badge">100 ₴</h4>
+                            </div>
+                            <p class="description">Огірковий салат, червонокачанна капуста і хліб</p>
+                        </li>
+                        <li>
+                            <div class="top">
+                                <h3 class="title">Панірована риба</h3>
+                                <h4 class="price badge">100 ₴</h4>
+                            </div>
+                            <p class="description">Ремулад, лимон, житній хліб і масло</p>
+                        </li>
+                    </ul>
+
+
+                    <!-- end menu content -->
+                </div>
+            </div>
             <div data-remodal-id="modal">
                 <i class="icon bg icon-CommentwithLines"></i>
                 <button data-remodal-action="close" class="remodal-close"></button>
