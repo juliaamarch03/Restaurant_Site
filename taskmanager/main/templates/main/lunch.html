@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,25 +15,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style-default.css">
+    <link rel="stylesheet" href="{% static 'static/css/style-default.css' %}">
 
     <!-- Page description -->
     <meta name="description" content="">
 
     <!-- Facebook -->
-    <meta property="og:title" content="starters" />
+    <meta property="og:title" content="lunch" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="./starters.html/" />
+    <meta property="og:url" content="./lunch.html/" />
     <meta property="og:description" content="" />
 
     <!-- Twitter -->
-    <meta name="twitter:title" content="starters" />
+    <meta name="twitter:title" content="lunch" />
     <meta name="twitter:description" content="" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favicons/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="./assets/img/favicons/favicon.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static './img/favicons/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static './img/favicons/apple-touch-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static './img/favicons/apple-touch-icon-152x152.png' %}">
+    <link rel="icon" type="image/png" href="{% static './img/favicons/favicon.png' %}" sizes="96x96">
 
 </head>
 
@@ -44,7 +46,7 @@
     <!-- The splash screen -->
     <div id="splash">
         <div class="loader">
-            <img class="splash-logo" src="./assets/img/logo/2.png" />
+            <img class="splash-logo" src="{% static './img/logo/2.png' %}" />
             <div class="line"></div>
         </div>
     </div>
@@ -74,12 +76,12 @@
                                         <h4>Вечеря</h4>
                                     </a>
                                 </li>
-                                <li class="btn ">
+                                <li class="btn active">
                                     <a href="./lunch.html" data-transition="slide-left">
                                         <h4>Обід</h4>
                                     </a>
                                 </li>
-                                <li class="btn active">
+                                <li class="btn ">
                                     <a href="./starters.html" data-transition="slide-left">
                                         <h4>Закуски</h4>
                                     </a>
@@ -94,35 +96,18 @@
 
                     <!-- menu content -->
                     <ul class="price-list">
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Спаржа</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">Спаржа, куряче яйце, підсмажені насіння соняшнику, сир Спенвуд</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Скумбрія</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">Скумбрія корніш, мариновані помідори, ароматне каррі, тамарилло</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Запечений біфштекс зі стейків</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">М'ятна петрушка з яблучним оцтом, сіллю, цукром та спеціями</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Сезонний суп</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">Щоденна підготовка</p>
-                        </li>
+                         {% for el in lunch %}
+                                <li>
+                                    <div class="top">
+                                        <h3 class="title">{{ el.title }}</h3>
+                                        <h4 class="price badge">{{ el.price }}</h4>
+                                    </div>
+                                    <p class="description">{{ el.components }}</p>
+                                </li>
+                            {% endfor %}
                     </ul>
+
+
                     <!-- end menu content -->
                 </div>
             </div>
@@ -230,37 +215,37 @@
 
     </div>
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/history.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/history.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/modernizr.js"></script>
+     <script type="text/javascript" src="{% static 'static/js/libs/modernizr.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/page.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/page.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/jquery-2.2.3.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/backgroundvideo/backgroundvideo.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/backgroundvideo/backgroundvideo.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/photoswipe/photoswipe.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/photoswipe/photoswipe-ui-default.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe-ui-default.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/device.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/device.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/remodal/remodal.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/remodal/remodal.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/custom/slidenavigation.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/custom/slidenavigation.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/app.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/app.js' %}"></script>
     <!-- end of scripts -->
 
 
