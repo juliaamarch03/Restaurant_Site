@@ -1,9 +1,11 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>About &middot; L'ambiance</title>
+    <title>Pepperoni club</title>
 
     <!-- mobile setup -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -13,25 +15,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style-default.css">
+    <link rel="stylesheet" href="{% static 'static/css/style-default.css' %}">
 
     <!-- Page description -->
     <meta name="description" content="">
 
     <!-- Facebook -->
-    <meta property="og:title" content="About" />
+    <meta property="og:title" content="starters" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="./about.html/" />
-    <meta property="og:description" content="Here the excerp for this page" />
+    <meta property="og:url" content="./starters.html/" />
+    <meta property="og:description" content="" />
 
     <!-- Twitter -->
-    <meta name="twitter:title" content="About" />
-    <meta name="twitter:description" content="Here the excerp for this page" />
+    <meta name="twitter:title" content="starters" />
+    <meta name="twitter:description" content="" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favicons/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="./assets/img/favicons/favicon.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static './img/favicons/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static './img/favicons/apple-touch-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static './img/favicons/apple-touch-icon-152x152.png' %}">
+    <link rel="icon" type="image/png" href="{% static './img/favicons/favicon.png' %}" sizes="96x96">
 
 </head>
 
@@ -44,7 +46,7 @@
     <!-- The splash screen -->
     <div id="splash">
         <div class="loader">
-            <img class="splash-logo" src="./assets/img/logo/2.png" />
+            <img class="splash-logo" src="{% static './img/logo/2.png' %}" />
             <div class="line"></div>
         </div>
     </div>
@@ -59,32 +61,52 @@
                     <h1>back</h1>
                 </a>
                 <section>
-                    <h3 class="badge">Історія</h3>
-                    <h1>Про нас</h1>
+                    <h3 class="badge">Меню</h3>
+                    <h1>Що ми готуємо</h1>
                 </section>
             </header>
             <!-- end header -->
             <div class="content-wrap">
                 <div class="content">
-                    <i class="icon bg icon-CommentwithLines"></i>
-                    <section>
-                        <header>
-                            <h2>Що ми робимо</h2>
-                            <h4 class="serif">Наша маленька історія</h4>
+                    <i class="icon bg icon-Food"></i>
+                    <header class="with-subnav">
+                            <ul>
+                                <li class="btn ">
+                                    <a href="./menu.html" data-transition="slide-left">
+                                        <h4>Вечеря</h4>
+                                    </a>
+                                </li>
+                                <li class="btn ">
+                                    <a href="./lunch.html" data-transition="slide-left">
+                                        <h4>Обід</h4>
+                                    </a>
+                                </li>
+                                <li class="btn active">
+                                    <a href="./starters.html" data-transition="slide-left">
+                                        <h4>Закуски</h4>
+                                    </a>
+                                </li>
+                                <li class="btn ">
+                                    <a href="./sweets.html" data-transition="slide-left">
+                                        <h4>Солодощі</h4>
+                                    </a>
+                                </li>
+                            </ul>
                         </header>
 
-                        <section>
-                            <p>Peperoni Club - ресторан ексклюзивної японської кухні, який затишно розташований в Premier Palace Hotel, історичному готелі в Києві з віковою історією. Peperoni Club - це особливе місце, над створенням якого ретельно працювали кращі фахівці і експерти, щоб ви змогли відчути неповторний дух Японії, насолоджуючись смачними стравами в хорошій компанії. </p>
-                            <p>Основні принципи Peperoni Club - це найсвіжіші і найкращі продукти, традиційні і адаптовані рецепти від наших кухарів, найвищі вимоги і стандарти на всіх етапах приготування кожної страви.</p>
-                        </section>
-
-                        <footer>
-                            <div class="signature">
-                                <h6>Written by.</h6>
-                                <h5>Pierre Gabant</h5>
-                            </div>
-                        </footer>
-                    </section>
+                    <!-- menu content -->
+                    <ul class="price-list">
+                        {% for el in starters %}
+                                <li>
+                                    <div class="top">
+                                        <h3 class="title">{{ el.title }}</h3>
+                                        <h4 class="price badge">{{ el.price }}</h4>
+                                    </div>
+                                    <p class="description">{{ el.components }}</p>
+                                </li>
+                            {% endfor %}
+                    </ul>
+                    <!-- end menu content -->
                 </div>
             </div>
             <div data-remodal-id="modal">
@@ -101,8 +123,8 @@
         <!-- end of main content -->
     </div>
 
-<!-- The slideshow -->
-<ul id="slideshow" data-speed="6000">
+    <!-- The slideshow -->
+    <ul id="slideshow" data-speed="6000">
         <li class="visible" style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/6.jpg&quot;); display: block; z-index: 1;">
             <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/6.jpg" alt="slideshow image">
         </li>
@@ -191,37 +213,37 @@
 
     </div>
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/history.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/history.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/modernizr.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/modernizr.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/page.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/page.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/jquery-2.2.3.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/backgroundvideo/backgroundvideo.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/backgroundvideo/backgroundvideo.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/photoswipe/photoswipe.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/photoswipe/photoswipe-ui-default.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe-ui-default.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/device.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/device.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/remodal/remodal.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/remodal/remodal.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/custom/slidenavigation.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/custom/slidenavigation.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/app.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/app.js' %}"></script>
     <!-- end of scripts -->
 
 

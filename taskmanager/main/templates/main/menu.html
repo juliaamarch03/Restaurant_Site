@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,25 +14,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style-default.css">
+    <link rel="stylesheet" href="{% static 'static/css/style-default.css' %}">
 
     <!-- Page description -->
     <meta name="description" content="">
 
     <!-- Facebook -->
-    <meta property="og:title" content="sweets" />
+    <meta property="og:title" content="Menu" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="./sweets.html/" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="./menu.html/" />
+    <meta property="og:description" content="Here the excerp for this page" />
 
     <!-- Twitter -->
-    <meta name="twitter:title" content="sweets" />
-    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="Menu" />
+    <meta name="twitter:description" content="Here the excerp for this page" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favicons/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="./assets/img/favicons/favicon.png" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static './img/favicons/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static './img/favicons/apple-touch-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static './img/favicons/apple-touch-icon-152x152.png' %}">
+    <link rel="icon" type="image/png" href="{% static './img/favicons/favicon.png' %}" sizes="96x96">
 
 </head>
 
@@ -44,7 +45,7 @@
     <!-- The splash screen -->
     <div id="splash">
         <div class="loader">
-            <img class="splash-logo" src="./assets/img/logo/2.png" />
+            <img class="splash-logo" src="{% static './img/logo/2.png' %}" />
             <div class="line"></div>
         </div>
     </div>
@@ -67,9 +68,10 @@
             <div class="content-wrap">
                 <div class="content">
                     <i class="icon bg icon-Food"></i>
-                    <header class="with-subnav">
+                    <section>
+                        <header class="with-subnav">
                             <ul>
-                                <li class="btn ">
+                                <li class="btn active">
                                     <a href="./menu.html" data-transition="slide-left">
                                         <h4>Вечеря</h4>
                                     </a>
@@ -84,7 +86,7 @@
                                         <h4>Закуски</h4>
                                     </a>
                                 </li>
-                                <li class="btn active">
+                                <li class="btn ">
                                     <a href="./sweets.html" data-transition="slide-left">
                                         <h4>Солодощі</h4>
                                     </a>
@@ -92,49 +94,63 @@
                             </ul>
                         </header>
 
-                    <!-- menu content -->
-                    <ul class="price-list">
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Млинці</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">З морозивом, збитими вершками, шоколадним соусом та горіхами</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Теплий яблучний пиріг</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">З морозивом, збитими вершками, шоколадним соусом та горіхами</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Полуничний пиріг</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">З морозивом, збитими вершками, шоколадним соусом та горіхами</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Бананова шкірка</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">3 scoops of icecream, whipped cream, chocolate sauce and nuts</p>
-                        </li>
-                        <li>
-                            <div class="top">
-                                <h3 class="title">Смажений Каменберт</h3>
-                                <h4 class="price badge">100 ₴</h4>
-                            </div>
-                            <p class="description">Брусниця, фрукти, тости та масло</p>
-                        </li>
-                    </ul>
+                        <!-- menu content -->
+                        <ul class="price-list">
+                            {% for el in dinner %}
+                                <li>
+                                    <div class="top">
+                                        <h3 class="title">{{ el.title }}</h3>
+                                        <h4 class="price badge">{{ el.price }}</h4>
+                                    </div>
+                                    <p class="description">{{ el.components }}</p>
+                                </li>
+                            {% endfor %}
+                            <!--
+                            <li>
+                                <div class="top">
+                                    <h3 class="title">Today’s special</h3>
+                                    <h4 class="price badge">$ 22.0</h4>
+                                </div>
+                                <p class="description">Everyday fresh</p>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <h3 class="title">Breaded shrimps</h3>
+                                    <h4 class="price badge">$ 22</h4>
+                                </div>
+                                <p class="description">Salad, dressing, lemon, bread and butter</p>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <h3 class="title">Lagune-cocktail</h3>
+                                    <h4 class="price badge">$ 19</h4>
+                                </div>
+                                <p class="description">Shrimps, pineapple, salad, dressing, bread and butter</p>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <h3 class="title">Smoked salmon</h3>
+                                    <h4 class="price badge">$ 16</h4>
+                                </div>
+                                <p class="description">Asparagus, herb dressing, salad, bread and butter</p>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <h3 class="title">Green salad</h3>
+                                    <h4 class="price badge">$ 22</h4>
+                                </div>
+                                <p class="description">Dressing, bread and butter</p>
+                            </li>
+                            -->
+                        </ul>
 
 
-                    <!-- end menu content -->
+
+                        <!-- end menu content -->
+                    </section>
                 </div>
             </div>
+
             <div data-remodal-id="modal">
                 <i class="icon bg icon-CommentwithLines"></i>
                 <button data-remodal-action="close" class="remodal-close"></button>
@@ -239,37 +255,37 @@
 
     </div>
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/history.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/history.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/modernizr.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/modernizr.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/page.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/page.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/jquery-2.2.3.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/backgroundvideo/backgroundvideo.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/backgroundvideo/backgroundvideo.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/photoswipe/photoswipe.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/photoswipe/photoswipe-ui-default.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe-ui-default.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/device.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/device.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/libs/remodal/remodal.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/libs/remodal/remodal.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/custom/slidenavigation.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/custom/slidenavigation.js' %}"></script>
     <!-- end of scripts -->
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/app.js"></script>
+    <script type="text/javascript" src="{% static 'static/js/app.js' %}"></script>
     <!-- end of scripts -->
 
 
