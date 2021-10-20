@@ -30,3 +30,11 @@ def sweets(request):
     return render(request, 'main/sweets.html', {'sweets': sweets})
 
 
+def contact(request):
+    return render(request, 'main/contact.html')
+
+
+def recipe(request):
+    return render(request, 'main/recipe.html')
+
+
