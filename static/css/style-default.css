@@ -403,8 +403,8 @@ h2 {
   font-weight: 700;
 }
 h3 {
-  font-size: 21px;
-  font-size: 2.1rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 h4 {
   font-size: 16px;
@@ -479,9 +479,9 @@ blockquote {
 }
 blockquote p {
   font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   color: #6c9bae;
-  font-family: 'merriweather-italic', serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   letter-spacing: 1px;
   opacity: 1;
   margin: 0;
@@ -2300,7 +2300,7 @@ html {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   background-color: rgba(0, 0, 0, 0.95);
-  font: normal 62.5%/1em 'montserratregular', sans-serif;
+  font: normal 62.5%/1em 'Montserrat Alternates', sans-serif;
   height: 100%;
   color: #FFFFFF;
   overflow: hidden;
@@ -2868,7 +2868,7 @@ header .logo h1 {
   border: 0;
 }
 header .logo img {
-  width: 100%;
+  width: 80%;
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape), only screen and (min-width: 1025px) {
   header .logo {
@@ -3497,8 +3497,8 @@ time * {
   display: inline-block;
 }
 time strong {
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-family: 'Montserrat Alternates', sans-serif;
   color: #6c9bae;
   min-width: 110px;
@@ -3648,7 +3648,7 @@ main .overlay {
 }
 #splash .loader {
   position: absolute;
-  top: 30%;
+  top: 25%;
   width: 100%;
 }
 #splash .loader img {
