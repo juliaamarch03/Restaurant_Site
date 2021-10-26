@@ -19,13 +19,13 @@
     <meta name="description" content="">
 
     <!-- Facebook -->
-    <meta property="og:title" content="Restaurant" />
+    <meta property="og:title" content="contact" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content=".//" />
+    <meta property="og:url" content="./contact.html/" />
     <meta property="og:description" content="Here the excerp for this page" />
 
     <!-- Twitter -->
-    <meta name="twitter:title" content="Restaurant" />
+    <meta name="twitter:title" content="contact" />
     <meta name="twitter:description" content="Here the excerp for this page" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicons/apple-touch-icon-72x72.png">
@@ -53,89 +53,126 @@
     <div id="wrapper">
         <!-- main content -->
         <main>
-            <header>
-                <a href="." class="logo">
-                    <h1>Restaurant</h1>
-                    <img src="./assets/img/logo/3.png" alt="Restaurant" />
+            <!-- The header for content -->
+            <header class="detail">
+                <a href="." class="back" data-transition="slide-from-top">
+                    <h1>back</h1>
                 </a>
+                <section>
+                    <h3 class="badge">Контакти</h3>
+                    <h1>Залиште нам повідомлення</h1>
+                </section>
             </header>
-            <!-- The navigation -->
-            <nav class="strokes">
-                <ul id="navigation">
-                    <li>
-                        <a href="./about.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Про нас</h1>
-                                <h5 class="badge-rounded">Щось про нас</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-CommentwithLines"></i>
-                                <h5 class="serif">Наша історія</h5>
-                                <p>Читати більше</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./menu.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Меню</h1>
-                                <h5 class="badge-rounded">Наші смачні страви</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Food"></i>
-                                <h5 class="serif">Наша кухня</h5>
-                                <p>Страви та напої</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./recipe.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Рецепти</h1>
-                                <h5 class="badge-rounded">Наші секретні рецепти</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Diary"></i>
-                                <h5 class="serif">Більше</h5>
-                                <p>Спеціальні рецепти</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./reservation.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Бронювання</h1>
-                                <h5 class="badge-rounded">Приємної вечері</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-Users"></i>
-                                <h5 class="serif">Приєднайся до нас</h5>
-                                <p>у гарний вечір</p>
-                            </footer>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./contact.html" data-transition="slide-to-top">
-                            <section>
-                                <h1>Контакти</h1>
-                                <h5 class="badge-rounded">Потрібен зв'язок?</h5>
-                            </section>
-                            <footer>
-                                <i class="icon icon-LocationMarker"></i>
-                                <h5 class="serif">Залиште нам</h5>
-                                <p>повідомлення</p>
-                            </footer>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- End navigation -->
-            <div class="overlay"></div>
+            <!-- end header -->
+            <div class="content-wrap">
+                <section class="content">
+                    <i class="icon bg icon-LocationMarker"></i>
+                    <section class="info">
+                        <header>
+                            <h2>Інформація</h2>
+                            <h4 class="serif">Наше місцезнаходження</h4>
+                        </header>
+                        <ul class="icon-list">
+                            <li>
+                                <a href="#">
+                                    <i class="icon icon-LocationMarker"></i>
+                                    <span>Market 5, 9100 New York</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+31 45 43 32 43">
+                                    <i class="icon icon-Phone"></i>
+                                    <span>+31 45 43 32 43</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@vagebond.nl">
+                                    <i class="icon icon-Email"></i>
+                                    <span>info@vagebond.nl</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon icon-Share"></i>
+                                    <span>facebook/vagebond</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="hours">
+                        <header>
+                            <h2>Години роботи</h2>
+                            <h4 class="serif">Ви можете узгодити додатковий час з адміністрацією ресторану</h4>
+                        </header>
+
+                        <div class="hours">
+                            <time itemprop="openingHours" datetime="Monday 10:00-24:00">
+                    <strong>Понеділок</strong>
+                    <h3>10:00 - 23:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Tuesday 10:00-24:00">
+                    <strong>Вівторок</strong>
+                    <h3>10:00 - 23:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Wednesday 10:00-24:00">
+                    <strong>Середа</strong>
+                    <h3>10:00 - 23:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Closed">
+                    <strong>Четвер</strong>
+                    <h3>10:00 - 23:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Friday 10:00-24:00">
+                    <strong>П'ятниця</strong>
+                    <h3>10:00 - 23:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Saturday 10:00-23:00">
+                    <strong>Субота</strong>
+                    <h3>10:00 - 23:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Sunday closed">
+                    <strong>Неділя</strong>
+                    <h3>Зачинено</h3>
+                </time>
+                        </div>
+
+                    </section>
+                    <section class="form-inline">
+                        <header>
+                            <h2>Повідомлення</h2>
+                            <h4 class="serif">Ми хотіли б почути від вас!</h4>
+                            <p>Ви можете поділитись з нами своєю думкою, запропонувати пропозицію. Будемо вдячні за зворотній зв'язок.</p>
+                        </header>
+                        <form action="./php/contact.php" method="post" id="contact-form" class="form ambiance-html-form">
+                            <div class="row">
+                                <div class="form-group">
+                                    <input name="name" id="name" type="text" placeholder="ім'я">
+                                    <i class="icon icon-User"></i>
+                                </div>
+                                <div class="form-group">
+                                    <input class="full-border" name="email" id="email" type="email" placeholder="email">
+                                    <i class="icon icon-Email"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="10" cols="40" required="required" name="message" id="body" placeholder="повідомлення"></textarea>
+                                <i class="icon icon-Typing"></i>
+                            </div>
+                            <span class="message"><strong>Статус:</strong> </span>
+                            <div class="submit">
+                                <button type="submit" value="submit">
+                        <i class="icon icon-Forward"></i>
+                    </button>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+            </div>
             <div data-remodal-id="modal">
                 <i class="icon bg icon-CommentwithLines"></i>
                 <button data-remodal-action="close" class="remodal-close"></button>
-                <h1></h1>
-                <p></p>
+                <h1>Дякуємо!</h1>
+                <p>Ми зв'яжемось з Вами якомога швидше!</p>
                 <div class="signature center">
                     <h6>-CHEF-</h6>
                     <h5>Pierre Gabant</h5>
