@@ -38,3 +38,7 @@ def recipe(request):
     return render(request, 'main/recipe.html')
 
 
+def reservation(request):
+    return render(request, 'main/reservation.html')
+
+
