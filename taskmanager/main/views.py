@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Menu
+from .forms import ReservationForm
 
 
 def index(request):
@@ -39,6 +40,13 @@ def recipe(request):
 
 
 def reservation(request):
-    return render(request, 'main/reservation.html')
+    if request.method == 'POST':
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            form.save();
+
+
+    form = ReservationForm()
+    return render(request, 'main/reservation.html', {'form': form})
 
 
