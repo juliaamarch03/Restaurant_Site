@@ -1,56 +1,37 @@
-{%  load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Pepperoni club</title>
-
     <!-- mobile setup -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="apple-mobile-web-app-title" content="L'ambiance" />
-
+    <meta name="apple-mobile-web-app-title" content="Pepperoni club" />
     <!-- stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'static/css/style-default.css' %}">
-
     <!-- Page description -->
     <meta name="description" content="">
-
-    <!-- Facebook -->
-    <meta property="og:title" content="contact" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="./contact.html/" />
-    <meta property="og:description" content="Here the excerp for this page" />
-
-    <!-- Twitter -->
-    <meta name="twitter:title" content="contact" />
-    <meta name="twitter:description" content="Here the excerp for this page" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="72x72" href="{% static './img/favicons/apple-touch-icon-72x72.png' %}">
     <link rel="apple-touch-icon" sizes="120x120" href="{% static './img/favicons/apple-touch-icon-120x120.png' %}">
     <link rel="apple-touch-icon" sizes="152x152" href="{% static './img/favicons/apple-touch-icon-152x152.png' %}">
     <link rel="icon" type="image/png" href="{% static './img/favicons/favicon.png' %}" sizes="96x96">
 
-</head>
-
 <body>
-
     <!-- Top shadow -->
     <div class="shadow"></div>
     <!-- end top shadow -->
-
     <!-- The splash screen -->
     <div id="splash">
-        <div class="loader">
-            <img class="splash-logo" src="{% static './img/logo/2.png' %}" />
+        <div class="loader"> <img class="splash-logo" src="{% static './img/logo/2.png' %}" />
             <div class="line"></div>
         </div>
     </div>
     <!-- End of splash screen -->
-
     <div id="wrapper">
         <!-- main content -->
         <main>
@@ -66,38 +47,29 @@
             </header>
             <!-- end header -->
             <div class="content-wrap">
-                <section class="content">
-                    <i class="icon bg icon-LocationMarker"></i>
+                <section class="content"> <i class="icon bg icon-LocationMarker"></i>
                     <section class="info">
                         <header>
                             <h2>Інформація</h2>
                             <h4 class="serif">Наше місцезнаходження</h4>
                         </header>
                         <ul class="icon-list">
-                            <li>
-                                <a href="#">
+                            <li> <a href="#">
                                     <i class="icon icon-LocationMarker"></i>
                                     <span>Market 5, 9100 New York</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:+31 45 43 32 43">
+                                </a> </li>
+                            <li> <a href="tel:+31 45 43 32 43">
                                     <i class="icon icon-Phone"></i>
                                     <span>+31 45 43 32 43</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:info@vagebond.nl">
+                                </a> </li>
+                            <li> <a href="mailto:info@vagebond.nl">
                                     <i class="icon icon-Email"></i>
                                     <span>info@vagebond.nl</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                                </a> </li>
+                            <li> <a href="#">
                                     <i class="icon icon-Share"></i>
                                     <span>facebook/vagebond</span>
-                                </a>
-                            </li>
+                                </a> </li>
                         </ul>
                     </section>
                     <section class="hours">
@@ -105,38 +77,28 @@
                             <h2>Години роботи</h2>
                             <h4 class="serif">Ви можете узгодити додатковий час з адміністрацією ресторану</h4>
                         </header>
-
-                        <div class="hours">
-                            <time itemprop="openingHours" datetime="Monday 10:00-24:00">
+                        <div class="hours"> <time itemprop="openingHours" datetime="Monday 10:00-24:00">
                     <strong>Понеділок</strong>
                     <h3>10:00 - 23:00</h3>
-                </time>
-                            <time itemprop="openingHours" datetime="Tuesday 10:00-24:00">
+                </time> <time itemprop="openingHours" datetime="Tuesday 10:00-24:00">
                     <strong>Вівторок</strong>
                     <h3>10:00 - 23:00</h3>
-                </time>
-                            <time itemprop="openingHours" datetime="Wednesday 10:00-24:00">
+                </time> <time itemprop="openingHours" datetime="Wednesday 10:00-24:00">
                     <strong>Середа</strong>
                     <h3>10:00 - 23:00</h3>
-                </time>
-                            <time itemprop="openingHours" datetime="Closed">
+                </time> <time itemprop="openingHours" datetime="Closed">
                     <strong>Четвер</strong>
                     <h3>10:00 - 23:00</h3>
-                </time>
-                            <time itemprop="openingHours" datetime="Friday 10:00-24:00">
+                </time> <time itemprop="openingHours" datetime="Friday 10:00-24:00">
                     <strong>П'ятниця</strong>
                     <h3>10:00 - 23:00</h3>
-                </time>
-                            <time itemprop="openingHours" datetime="Saturday 10:00-23:00">
+                </time> <time itemprop="openingHours" datetime="Saturday 10:00-23:00">
                     <strong>Субота</strong>
                     <h3>10:00 - 23:00</h3>
-                </time>
-                            <time itemprop="openingHours" datetime="Sunday closed">
+                </time> <time itemprop="openingHours" datetime="Sunday closed">
                     <strong>Неділя</strong>
                     <h3>Зачинено</h3>
-                </time>
-                        </div>
-
+                </time> </div>
                     </section>
                     <section class="form-inline">
                         <header>
@@ -146,32 +108,18 @@
                         </header>
                         <form action="./php/contact.php" method="post" id="contact-form" class="form ambiance-html-form">
                             <div class="row">
-                                <div class="form-group">
-                                    <input name="name" id="name" type="text" placeholder="ім'я">
-                                    <i class="icon icon-User"></i>
-                                </div>
-                                <div class="form-group">
-                                    <input class="full-border" name="email" id="email" type="email" placeholder="email">
-                                    <i class="icon icon-Email"></i>
-                                </div>
+                                <div class="form-group"> <input name="name" id="name" type="text" placeholder="ім'я"> <i class="icon icon-User"></i> </div>
+                                <div class="form-group"> <input class="full-border" name="email" id="email" type="email" placeholder="email"> <i class="icon icon-Email"></i> </div>
                             </div>
-                            <div class="form-group">
-                                <textarea rows="10" cols="40" required="required" name="message" id="body" placeholder="повідомлення"></textarea>
-                                <i class="icon icon-Typing"></i>
-                            </div>
-                            <span class="message"><strong>Статус:</strong> </span>
-                            <div class="submit">
-                                <button type="submit" value="submit">
+                            <div class="form-group"> <textarea rows="10" cols="40" required="required" name="message" id="body" placeholder="повідомлення"></textarea> <i class="icon icon-Typing"></i> </div> <span class="message"><strong>Статус:</strong> </span>
+                            <div class="submit"> <button type="submit" value="submit">
                         <i class="icon icon-Forward"></i>
-                    </button>
-                            </div>
+                    </button> </div>
                         </form>
                     </section>
                 </section>
             </div>
-            <div data-remodal-id="modal">
-                <i class="icon bg icon-CommentwithLines"></i>
-                <button data-remodal-action="close" class="remodal-close"></button>
+            <div data-remodal-id="modal"> <i class="icon bg icon-CommentwithLines"></i> <button data-remodal-action="close" class="remodal-close"></button>
                 <h1>Дякуємо!</h1>
                 <p>Ми зв'яжемось з Вами якомога швидше!</p>
                 <div class="signature center">
@@ -182,130 +130,27 @@
         </main>
         <!-- end of main content -->
     </div>
-
     <!-- The slideshow -->
     <ul id="slideshow" data-speed="6000">
-        <li class="visible" style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/6.jpg&quot;); display: block; z-index: 1;">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/6.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/new/1.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/new/1.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/grill/4.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/grill/4.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/3.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/3.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/new/8.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/new/8.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/4.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/4.jpg" alt="slideshow image">
-        </li>
+        <li> <img src="{% static './img/slideshow/1.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/2.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/3.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/4.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/5.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/6.jpg' %}" alt="slideshow image" /> </li>
     </ul>
     <!-- end of slideshow -->
-
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <!-- Background of PhotoSwipe.
-         It's a separate element as animating opacity is faster than rgba(). -->
-        <div class="pswp__bg"></div>
-
-        <!-- Slides wrapper with overflow:hidden. -->
-        <div class="pswp__scroll-wrap">
-
-            <!-- Container that holds slides.
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-            <div class="pswp__ui pswp__ui--hidden">
-
-                <div class="pswp__top-bar">
-
-                    <!--  Controls are self-explanatory. Order can be changed. -->
-
-                    <div class="pswp__counter"></div>
-
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div>
-
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-      <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/history.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/modernizr.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/page.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
-    <script type="text/javascript" src="{% static 'static/js/libs/jquery-2.2.3.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
+    <script type="text/javascript" src="{% static 'static/js/libs/jquery-2.2.3.js"></script>
     <script type="text/javascript" src="{% static 'static/js/libs/backgroundvideo/backgroundvideo.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe-ui-default.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/device.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/remodal/remodal.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/custom/slidenavigation.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/app.js' %}"></script>
-    <!-- end of scripts -->
-
 </body>
 
 </html>
