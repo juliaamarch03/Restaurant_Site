@@ -50,3 +50,11 @@ def reservation(request):
     return render(request, 'main/reservation.html', {'form': form})
 
 
+def sexy_salmon(request):
+    return render(request, 'main/sexy_salmon.html')
+
+
+def awesome_recipe(request):
+    return render(request, 'main/awesome_recipe.html')
+
+

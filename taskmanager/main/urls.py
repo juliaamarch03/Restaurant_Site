@@ -10,5 +10,7 @@ urlpatterns = [
     path('sweets.html', views.sweets),
     path('contact.html', views.contact),
     path('recipe.html', views.recipe),
-    path('reservation.html', views.reservation)
+    path('reservation.html', views.reservation),
+    path('sexy_salmon.html', views.sexy_salmon),
+    path('awesome_recipe.html', views.awesome_recipe)
 ]
