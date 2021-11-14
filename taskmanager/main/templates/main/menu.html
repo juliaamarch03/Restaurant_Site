@@ -33,12 +33,12 @@
     <link rel="apple-touch-icon" sizes="120x120" href="{% static './img/favicons/apple-touch-icon-120x120.png' %}">
     <link rel="apple-touch-icon" sizes="152x152" href="{% static './img/favicons/apple-touch-icon-152x152.png' %}">
     <link rel="icon" type="image/png" href="{% static './img/favicons/favicon.png' %}" sizes="96x96">
-
+    <link rel="icon" type="image/png" href="{% static './img/favicons/favicon.png' %}" sizes="96x96">
     <style>
           .icon.icon-Food {
               position: relative;
           }
-          .icon.icon-Food:before {
+          .icon .icon-Food:before {
               -webkit-transform: translate(-50%, -50%);
               -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
@@ -125,47 +125,7 @@
                                     <p class="description">{{ el.components }}</p>
                                 </li>
                             {% endfor %}
-                            <!--
-                            <li>
-                                <div class="top">
-                                    <h3 class="title">Today’s special</h3>
-                                    <h4 class="price badge">$ 22.0</h4>
-                                </div>
-                                <p class="description">Everyday fresh</p>
-                            </li>
-                            <li>
-                                <div class="top">
-                                    <h3 class="title">Breaded shrimps</h3>
-                                    <h4 class="price badge">$ 22</h4>
-                                </div>
-                                <p class="description">Salad, dressing, lemon, bread and butter</p>
-                            </li>
-                            <li>
-                                <div class="top">
-                                    <h3 class="title">Lagune-cocktail</h3>
-                                    <h4 class="price badge">$ 19</h4>
-                                </div>
-                                <p class="description">Shrimps, pineapple, salad, dressing, bread and butter</p>
-                            </li>
-                            <li>
-                                <div class="top">
-                                    <h3 class="title">Smoked salmon</h3>
-                                    <h4 class="price badge">$ 16</h4>
-                                </div>
-                                <p class="description">Asparagus, herb dressing, salad, bread and butter</p>
-                            </li>
-                            <li>
-                                <div class="top">
-                                    <h3 class="title">Green salad</h3>
-                                    <h4 class="price badge">$ 22</h4>
-                                </div>
-                                <p class="description">Dressing, bread and butter</p>
-                            </li>
-                            -->
                         </ul>
-
-
-
                         <!-- end menu content -->
                     </section>
                 </div>
