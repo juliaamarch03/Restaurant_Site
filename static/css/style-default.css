@@ -768,7 +768,7 @@ blockquote p {
   height: 27px;
   top: 50%;
   left: 55%;
-  background-image: url('../img/interface/knive-fork.svg');
+  background-image: url("https://files.fm/f/h37xnm4ss");
   background-size: cover;
 }
 .icon.icon-Plus:before {
