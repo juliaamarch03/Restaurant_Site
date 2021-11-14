@@ -1,57 +1,37 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Pepperoni club</title>
-
     <!-- mobile setup -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="apple-mobile-web-app-title" content="L'ambiance" />
-
+    <meta name="apple-mobile-web-app-title" content="Pepperoni club" />
     <!-- stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'static/css/style-default.css' %}">
-
     <!-- Page description -->
     <meta name="description" content="">
-
-    <!-- Facebook -->
-    <meta property="og:title" content="starters" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="./starters.html/" />
-    <meta property="og:description" content="" />
-
-    <!-- Twitter -->
-    <meta name="twitter:title" content="starters" />
-    <meta name="twitter:description" content="" />
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="72x72" href="{% static './img/favicons/apple-touch-icon-72x72.png' %}">
     <link rel="apple-touch-icon" sizes="120x120" href="{% static './img/favicons/apple-touch-icon-120x120.png' %}">
     <link rel="apple-touch-icon" sizes="152x152" href="{% static './img/favicons/apple-touch-icon-152x152.png' %}">
     <link rel="icon" type="image/png" href="{% static './img/favicons/favicon.png' %}" sizes="96x96">
 
-</head>
-
 <body>
-
     <!-- Top shadow -->
     <div class="shadow"></div>
     <!-- end top shadow -->
-
     <!-- The splash screen -->
     <div id="splash">
-        <div class="loader">
-            <img class="splash-logo" src="{% static './img/logo/2.png' %}" />
+        <div class="loader"> <img class="splash-logo" src="{% static './img/logo/2.png' %}" />
             <div class="line"></div>
         </div>
     </div>
     <!-- End of splash screen -->
-
     <div id="wrapper">
         <!-- main content -->
         <main>
@@ -67,36 +47,34 @@
             </header>
             <!-- end header -->
             <div class="content-wrap">
-                <div class="content">
-                    <i class="icon bg icon-Food"></i>
+                <div class="content"> <i class="icon bg icon-Food"></i>
                     <header class="with-subnav">
-                            <ul>
-                                <li class="btn ">
-                                    <a href="./menu.html" data-transition="slide-left">
-                                        <h4>Вечеря</h4>
-                                    </a>
-                                </li>
-                                <li class="btn ">
-                                    <a href="./lunch.html" data-transition="slide-left">
-                                        <h4>Обід</h4>
-                                    </a>
-                                </li>
-                                <li class="btn active">
-                                    <a href="./starters.html" data-transition="slide-left">
-                                        <h4>Закуски</h4>
-                                    </a>
-                                </li>
-                                <li class="btn ">
-                                    <a href="./sweets.html" data-transition="slide-left">
-                                        <h4>Солодощі</h4>
-                                    </a>
-                                </li>
-                            </ul>
-                        </header>
-
+                        <ul>
+                            <li class="btn ">
+                                <a href="./menu.html" data-transition="slide-left">
+                                    <h4>Вечеря</h4>
+                                </a>
+                            </li>
+                            <li class="btn ">
+                                <a href="./lunch.html" data-transition="slide-left">
+                                    <h4>Обід</h4>
+                                </a>
+                            </li>
+                            <li class="btn active">
+                                <a href="./starters.html" data-transition="slide-left">
+                                    <h4>Закуски</h4>
+                                </a>
+                            </li>
+                            <li class="btn ">
+                                <a href="./sweets.html" data-transition="slide-left">
+                                    <h4>Солодощі</h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
                     <!-- menu content -->
                     <ul class="price-list">
-                        {% for el in starters %}
+                          {% for el in starters %}
                                 <li>
                                     <div class="top">
                                         <h3 class="title">{{ el.title }}</h3>
@@ -104,14 +82,12 @@
                                     </div>
                                     <p class="description">{{ el.components }}</p>
                                 </li>
-                            {% endfor %}
+                        {% endfor %}
                     </ul>
                     <!-- end menu content -->
                 </div>
             </div>
-            <div data-remodal-id="modal">
-                <i class="icon bg icon-CommentwithLines"></i>
-                <button data-remodal-action="close" class="remodal-close"></button>
+            <div data-remodal-id="modal"> <i class="icon bg icon-CommentwithLines"></i> <button data-remodal-action="close" class="remodal-close"></button>
                 <h1></h1>
                 <p></p>
                 <div class="signature center">
@@ -122,40 +98,23 @@
         </main>
         <!-- end of main content -->
     </div>
-
     <!-- The slideshow -->
     <ul id="slideshow" data-speed="6000">
-        <li class="visible" style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/6.jpg&quot;); display: block; z-index: 1;">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/6.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/new/1.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/new/1.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/grill/4.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/grill/4.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/3.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/3.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/new/8.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/new/8.jpg" alt="slideshow image">
-        </li>
-        <li style="background-image: url(&quot;https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/4.jpg&quot;); display: block; z-index: 0;" class="">
-            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/4.jpg" alt="slideshow image">
-        </li>
+        <li> <img src="{% static './img/slideshow/1.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/2.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/3.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/4.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/5.jpg' %}" alt="slideshow image" /> </li>
+        <li> <img src="{% static './img/slideshow/6.jpg' %}" alt="slideshow image" /> </li>
     </ul>
     <!-- end of slideshow -->
-
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
         <!-- Background of PhotoSwipe.
          It's a separate element as animating opacity is faster than rgba(). -->
         <div class="pswp__bg"></div>
-
         <!-- Slides wrapper with overflow:hidden. -->
         <div class="pswp__scroll-wrap">
-
             <!-- Container that holds slides.
             PhotoSwipe keeps only 3 of them in the DOM to save memory.
             Don't modify these 3 pswp__item elements, data is added later on. -->
@@ -164,26 +123,11 @@
                 <div class="pswp__item"></div>
                 <div class="pswp__item"></div>
             </div>
-
             <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
             <div class="pswp__ui pswp__ui--hidden">
-
                 <div class="pswp__top-bar">
-
                     <!--  Controls are self-explanatory. Order can be changed. -->
-
-                    <div class="pswp__counter"></div>
-
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__counter"></div> <button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
                     <div class="pswp__preloader">
                         <div class="pswp__preloader__icn">
                             <div class="pswp__preloader__cut">
@@ -192,61 +136,28 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                     <div class="pswp__share-tooltip"></div>
-                </div>
-
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </div> <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
             </button>
-
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
                 <div class="pswp__caption">
                     <div class="pswp__caption__center"></div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/history.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/modernizr.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/page.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
-    <script type="text/javascript" src="{% static 'static/js/libs/jquery-2.2.3.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
+    <script type="text/javascript" src="{% static 'static/js/libs/jquery-2.2.3.js"></script>
     <script type="text/javascript" src="{% static 'static/js/libs/backgroundvideo/backgroundvideo.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/photoswipe/photoswipe-ui-default.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/device.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/libs/remodal/remodal.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/custom/slidenavigation.js' %}"></script>
-    <!-- end of scripts -->
-    <!-- scripts -->
     <script type="text/javascript" src="{% static 'static/js/app.js' %}"></script>
-    <!-- end of scripts -->
-
-
 </body>
 
 </html>
